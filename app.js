@@ -21,7 +21,11 @@ app.use(express.static(__dirname + '/public'));
 
 // **********************************************
 
-app.get('/imgs', function (req, res) {
+app.get('/', function (req, res) {
+    res.render('index');
+});
+
+app.get('/picasso', function (req, res) {
     var imagenes = {imgs: [
                         {url: 'PicassoGuernica.jpg'},
                         {url: 'Picasso_Drawing_by_pirouline.jpg'},
